@@ -7,7 +7,7 @@ floatX=float32
 enabled = True
 
 [cuda]
-root=/usr/local/cuda-7.5/
+root=/usr/local/cuda/
 
 
 [dnn.conv]
