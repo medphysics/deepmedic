@@ -4,7 +4,7 @@ apt-get clean && \
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN cd /root && wget https://repo.continuum.io/archive/Anaconda2-4.3.1-Linux-x86_64.sh --no-check-certificate -O /root/installer.sh && \
 mkdir $HOME/anaconda && /bin/bash /root/installer.sh -b -f -p "$HOME/anaconda" && rm -rf /root/installer.sh
-RUN /root/anaconda/bin/pip install theano sklearn nibabel pp 
+RUN /root/anaconda/bin/pip install theano sklearn nibabel pp keras 
 ENV PATH /root/anaconda/bin:$PATH
 RUN export PATH="$HOME/anaconda/bin:$PATH" && git config --global http.sslVerify false && \
 git clone https://github.com/Kamnitsask/deepmedic.git && \
